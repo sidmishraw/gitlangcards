@@ -1,5 +1,7 @@
 # git-lang-cards
 
+![](https://travis-ci.org/sidmishraw/gitlangcards.svg?branch=master)
+
 This is a React.js component for providing a carousel of cards. The cards show the languages the consumer likes to dabble in on GitHub. There is a link in the cards to go the consumer's GitHub projects filtered for the particular language.
 
 By using Materialize CSS the component gains touch compatibility :D
