@@ -1,3 +1,12 @@
-$primary-color: color("blue-grey", "lighten-2");
-$primary-color-light: lighten($primary-color, 15%);
-$primary-color-dark: darken($primary-color, 15%);
+//# primary color
+$primary-color: color("blue", "base") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+//# primary color
+
+//# secondary colors
+$secondary-color: color("orange", "base") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("orange", "base") !default;
+//# secondary color

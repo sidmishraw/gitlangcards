@@ -176,6 +176,8 @@ const webpackConfig = {
         ]
       },
       //# for materialize-css
+
+      //# CSS loader
       {
         test: /\.css$/i,
         loaders: ExtractTextWebpackPlugin.extract({
@@ -183,6 +185,26 @@ const webpackConfig = {
           use: "css-loader"
         })
       },
+      //# CSS loader
+
+      //# SASS and SCSS loader
+      {
+        test: /\.s(a|c)ss$/i,
+        loaders: ExtractTextWebpackPlugin.extract({
+          fallback: "style-loader",
+          use: [
+            {
+              loader: "css-loader"
+            },
+            {
+              loader: "sass-loader" // compiles SASS to CSS
+            }
+          ]
+        })
+      },
+      //# SASS and SCSS loader
+
+      //# use babel to transpile JSX and ES6
       {
         test: /\.jsx{0,1}$/i, // matches files ending with js or jsx
         loader: "babel-loader",
@@ -191,6 +213,7 @@ const webpackConfig = {
           presets: ["env", "react"] // babel loader used for transpiling ES6 code and JSX
         }
       }
+      //# use babel to transpile JSX and ES6
     ]
   },
   //# module specific configurations, and loaders
